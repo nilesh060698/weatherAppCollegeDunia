@@ -27,6 +27,7 @@ const Home = () => {
                 // console.log(WeatherData)
                 setWeatherData(WeatherData)
                 setLoader(false)
+
             }
         }, err => {
             console.log('err')
@@ -35,7 +36,7 @@ const Home = () => {
 
     };
     const getFormattedAddress = (location) => {
-        fetch('https://maps.googleapis.com/maps/api/geocode/json?latlng=' + location.latitude + ',' + location.longitude + '&key=' + 'AIzaSyCdx--GXh-1uSdczvv_4NoVuBqVFb1Kh4s')
+        fetch('https://maps.googleapis.com/maps/api/geocode/json?latlng=' + location.latitude + ',' + location.longitude + '&key=' + {PUT_YOUR_API_KEY})
             .then((response) => response.json())
             .then((responseJson) => {
                 setAddress(responseJson.results[0]);

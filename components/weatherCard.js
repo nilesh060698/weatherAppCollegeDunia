@@ -9,7 +9,7 @@ const WeatherCard = ({ WeatherData }) => {
             <Card.Divider></Card.Divider>
             <View>
                <View>
-                    <View style={{ flexDirection: 'row' }}>
+                    <View style={{ flexDirection : 'row' }}>
                         <Text style={styles.tempText}>{item.temp.day}&deg;c</Text>
                         {/* <Text>feels like  - {WeatherData.current.feels_like}&deg;c</Text> */}
                         <View style={styles.weather}>
@@ -27,7 +27,7 @@ const WeatherCard = ({ WeatherData }) => {
             <FlatList
                 data={WeatherData}
                 renderItem={renderItems}
-                style={{flex:0,marginBottom:'150%'}}
+                style={{flex:0,marginBottom:'60%'}}
                 keyExtractor={(item, index) => index.toString()}
             />
     )
