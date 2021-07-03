@@ -10,7 +10,7 @@ const screens = {
         screen: Home,
         navigationOptions:  ({navigation}) => {
             return  {
-                headerTitle: () => <Headers navigation={navigation} title="Weather Forcast"/>
+                headerTitle: () => <Headers navigation={navigation} title="Weather forecast"/>
             }
         }
            

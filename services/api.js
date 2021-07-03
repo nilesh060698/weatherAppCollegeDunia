@@ -9,6 +9,6 @@ const api = create({
 
 export async function getWeatherReport(location) {
    return api
-  .get(`data/2.5/forecast?lat=${location.latitude}&lon=${location.longitude}&appid=${API_KEY}&units=metric`)
+  .get(`data/2.5/onecall?lat=${location.latitude}&lon=${location.longitude}&appid=${API_KEY}&units=metric&exclude=minutely,hourly`)
   .then(response => {return response.data })
 }
